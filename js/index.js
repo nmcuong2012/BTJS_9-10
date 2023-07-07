@@ -29,6 +29,14 @@ function addEmployees(){
     display(employees);
     resetForm();
     $('#myModal').modal('hide');
+
+    let successPopup = document.getElementById("successPopup");
+    successPopup.style.display = "block";
+
+  // Ẩn popup sau 3 giây
+    setTimeout(function() {
+    successPopup.style.display = "none";
+    }, 3000);
 }
 
 ///-------------UPDATE NHAN VIEN ------------
@@ -49,6 +57,13 @@ function updateEmployee(){
   // B5: Reset form
   resetForm();
   $('#myModal').modal('hide');
+  let successPopup = document.getElementById("successPopup1");
+    successPopup.style.display = "block";
+
+  // Ẩn popup sau 3 giây
+    setTimeout(function() {
+    successPopup.style.display = "none";
+    }, 3000);
 }
 function removeEmployee(employeeID)
 {
@@ -56,6 +71,13 @@ function removeEmployee(employeeID)
     return value.id !== employeeID;
   });
   display(employees);
+  let successPopup = document.getElementById("successPopup2");
+    successPopup.style.display = "block";
+
+  // Ẩn popup sau 3 giây
+    setTimeout(function() {
+    successPopup.style.display = "none";
+    }, 3000);
 }
 
 function findEmployee() {

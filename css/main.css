@@ -3,6 +3,36 @@
   margin-left: 2px; 
   display: none;
 }
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+  color: green;
+  transition: all 0.5s ease;
+}
+.popup1 {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+  color: red;
+  transition: all 0.5s ease;
+}
 
 #SapXepGiam{
 	display: none;
