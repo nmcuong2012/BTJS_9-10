@@ -64,10 +64,15 @@ function findEmployee() {
   search = search.trim().toLowerCase();
 
   // B2: Lọc các nhân viên có xếp hạng khớp với giá trị tìm kiếm
-  let newEmployees = employees.filter((value) => {
-    let rank = value.calculateRank().toLowerCase();
-    return rank.includes(search);
-  });
+  let newEmployees;
+  if (search !== "") {
+    newEmployees = employees.filter((value) => {
+      let rank = value.calculateRank().toLowerCase();
+      return rank.includes(search);
+    });
+  } else {
+    newEmployees = employees;
+  }
 
   // B3: Hiển thị các nhân viên được tìm thấy ra giao diện
   display(newEmployees);
